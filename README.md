@@ -18,7 +18,7 @@ Para instalar a biblioteca em seu projeto Maven, adicione a seguinte dependênci
 ```xml
 <dependency>
     <groupId>io.github.dumijdev</groupId>
-    <artifactId>faker.ao</artifactId>
+    <artifactId>faker-ao</artifactId>
     <version>0.0.1</version>
 </dependency>
 ```
