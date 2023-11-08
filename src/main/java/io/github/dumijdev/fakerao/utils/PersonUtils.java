@@ -6,6 +6,7 @@ import io.github.dumijdev.fakerao.models.Person;
 
 import java.io.InputStream;
 import java.util.List;
+import java.util.Random;
 
 public class PersonUtils {
 
@@ -16,7 +17,7 @@ public class PersonUtils {
   }
 
   public static Person generate() {
-    return generate((int) System.currentTimeMillis());
+    return generate(new Random(System.currentTimeMillis()).nextInt());
   }
 
   public static Person generate(int seed) {

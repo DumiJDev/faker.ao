@@ -2,9 +2,11 @@ package io.github.dumijdev.fakerao.utils;
 
 import io.github.dumijdev.fakerao.models.Province;
 
+import java.util.Random;
+
 public class ProvinceUtils {
   public static Province randomize() {
-    return randomize((int) System.currentTimeMillis());
+    return randomize(new Random(System.currentTimeMillis()).nextInt());
   }
 
   public static Province randomize(int seed) {

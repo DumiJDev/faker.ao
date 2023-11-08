@@ -2,6 +2,8 @@ package io.github.dumijdev.fakerao.models;
 
 import lombok.Getter;
 
+import java.util.Objects;
+
 @Getter
 public class Province {
 
@@ -37,20 +39,22 @@ public class Province {
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
-    if (!(o instanceof Province)) return false;
-
+    if (o == null || getClass() != o.getClass()) return false;
     Province province = (Province) o;
-
-    if (!name.equals(province.name)) return false;
-    if (!code.equals(province.code)) return false;
-    return capital.equals(province.capital);
+    return Objects.equals(name, province.name) && Objects.equals(code, province.code) && Objects.equals(capital, province.capital);
   }
 
   @Override
   public int hashCode() {
-    int result = name.hashCode();
-    result = 31 * result + code.hashCode();
-    result = 31 * result + capital.hashCode();
-    return result;
+    return Objects.hash(name, code, capital);
+  }
+
+  @Override
+  public String toString() {
+    return "Province{" +
+        "name='" + name + '\'' +
+        ", code='" + code + '\'' +
+        ", capital='" + capital + '\'' +
+        '}';
   }
 }

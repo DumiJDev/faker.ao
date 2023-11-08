@@ -27,7 +27,11 @@ public class ProvinceUtilsTests {
   @Test
   public void shouldReturnsDifferentProvince() {
     Province province1 = ProvinceUtils.randomize();
-    Province province2 = ProvinceUtils.randomize();
+    Province province2 = ProvinceUtils.randomize(1);
+
+    System.out.println(province1);
+
+    System.out.println(province2);
 
     assertNotEquals(province1, province2);
   }
